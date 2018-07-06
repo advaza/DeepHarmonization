@@ -57,7 +57,8 @@ for idx, path_ in enumerate(path_src):
 	out = out.transpose((1,2,0))
 	out += np.array((104.00699, 116.66877, 122.67892))
 	out = out[:,:,::-1]
-  
+
+  	print("min=%.2f max=%.2f" %(np.min(out), np.max(out)))
   	neg_idx = out < 0.0
   	out[neg_idx] = 0.0
   	pos_idx = out > 255.0
