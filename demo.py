@@ -12,7 +12,7 @@ else:
   os.makedirs(folder_name)
 
 # load test image list
-filename = 'data/list.txt'
+filename = 'data/my_list.txt'
 with open(filename, 'r') as f:
   path_src = [line.rstrip() for line in f.readlines()]
 
